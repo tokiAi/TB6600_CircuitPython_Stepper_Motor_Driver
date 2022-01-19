@@ -6,8 +6,12 @@ https://www.instructables.com/Raspberry-Pi-Python-and-a-TB6600-Stepper-Motor-Dri
 and can be use as a base for the implementation of TB6600 Driver (or for wiring testing).
 
 ## cathode configuration
-- (-)PINs: ENA-, DIR-, PUL- to GND
-- (+)PINS: ENA+ to D10, DIR+ to D11, PUL+ to D12
+- (-)PINs: 
+  - ENA-, DIR-, PUL- to GND
+- (+)PINS: 
+  - ENA+ to D10 
+  - DIR+ to D11
+  - PUL+ to D12
 - A+,A-,B+,B- to motor
 - GND to power supply GND
 - VCC to power supply VCC

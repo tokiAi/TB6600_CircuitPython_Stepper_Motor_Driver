@@ -61,6 +61,7 @@ class TB6600:
             print('DIR set to LOW - Moving Forward at ' + str(self.delay))
         print('Controller PUL being driven.')
         for x in range(steps):
+            print(f"steps: {x} / {steps}")  # do not remove on: RP Pico circuitpython 9.0.5. (bugfix)
             self.PUL.value = not self.PUL.value
             sleep(self.delay)
 
@@ -81,6 +82,7 @@ class TB6600:
             self.reverse(self.stepsBwd, self.pause)
             self.cyclecount = (self.cyclecount + 1)
             self.disable()
+        self.cyclecount = config.cyclecount
         print('Cycling Completed')
 
 

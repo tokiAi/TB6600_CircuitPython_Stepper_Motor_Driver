@@ -60,8 +60,8 @@ class TB6600:
         else:
             print('DIR set to LOW - Moving Forward at ' + str(self.delay))
         print('Controller PUL being driven.')
-        for x in range(steps):
-            print(f"steps: {x} / {steps}")  # do not remove on: RP Pico circuitpython 9.0.5. (bugfix)
+        on_off_steps = steps * 2
+        for x in range(on_off_steps):
             self.PUL.value = not self.PUL.value
             sleep(self.delay)
 
